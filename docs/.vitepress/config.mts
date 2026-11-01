@@ -32,6 +32,10 @@ export default defineConfig({
       link: '/zh/',
       themeConfig: {
         editLink: { pattern: editPattern, text: '在 GitHub 上编辑此页' },
+        docFooter: { prev: '上一页', next: '下一页' },
+        outline: { label: '本页目录' },
+        sidebarMenuLabel: '菜单',
+        returnToTopLabel: '回到顶部',
         footer: {
           message: 'MIT 许可 · 使用 VitePress 构建',
           copyright: 'Copyright © 2026 dsh-kit'
@@ -40,9 +44,13 @@ export default defineConfig({
           { text: '指南', link: '/zh/guide/quick-start' },
           { text: 'Agent', link: '/zh/guide/agents' },
           { text: '为什么', link: '/zh/guide/why' },
-          { text: '插件', link: '/zh/plugins/' }
+          { text: '插件', link: '/zh/plugins/' },
+          { text: '博客', link: '/zh/blog/' }
         ],
         sidebar: {
+          '/zh/blog/': [
+            { text: '博客', items: [{ text: '桌面 Agent 不是 Web 套壳', link: '/zh/blog/desktop-agents-not-web-apps' }] }
+          ],
           '/zh/guide/': [
             {
               text: '指南',
@@ -83,9 +91,13 @@ export default defineConfig({
       { text: 'Guide', link: '/guide/quick-start' },
       { text: 'Agents', link: '/guide/agents' },
       { text: 'Why', link: '/guide/why' },
-      { text: 'Plugins', link: '/plugins/' }
+      { text: 'Plugins', link: '/plugins/' },
+      { text: 'Blog', link: '/blog/' }
     ],
     sidebar: {
+      '/blog/': [
+        { text: 'Blog', items: [{ text: 'Desktop agents are not web apps in a window', link: '/blog/desktop-agents-not-web-apps' }] }
+      ],
       '/guide/': [
         {
           text: 'Guide',

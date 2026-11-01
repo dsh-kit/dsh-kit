@@ -31,7 +31,7 @@
     "pack:check": "pnpm --filter create-dsh-kit pack:check",
     "docs:dev": "pnpm --filter dsh-kit-docs dev",
     "docs:build": "pnpm --filter dsh-kit-docs build",
-    "check": "pnpm test && pnpm preflight && node scripts/check-docs.mjs && node scripts/check-consistency.mjs && node scripts/check-links.mjs",
+    "check": "node scripts/check.mjs",
     "verify:template": "node scripts/verify-template.mjs"
   }
 }

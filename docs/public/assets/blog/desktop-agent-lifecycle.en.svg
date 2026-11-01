@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
+  <title id="title">Four lifecycle layers of a desktop plugin</title>
+  <desc id="desc">Profile saved, host loaded, client mounted, app restarted.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#8B94A7"/>
+    </marker>
+  </defs>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <g>
+      <rect x="70" y="28" width="620" height="82" rx="16" fill="#1F2430" stroke="#343B4A"/>
+      <circle cx="104" cy="69" r="18" fill="#F3F4F6"/>
+      <text x="104" y="75" text-anchor="middle" font-size="16" font-weight="700" fill="#0F1115">1</text>
+      <text x="140" y="62" font-size="17" font-weight="700" fill="#F7F8FA">Profile saved</text>
+      <text x="140" y="86" font-size="13" fill="#C8CEDB">Dependency and patch are written. The next boot includes the plugin.</text>
+    </g>
+    <line x1="380" y1="112" x2="380" y2="139" stroke="#8B94A7" stroke-width="2" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="70" y="145" width="620" height="82" rx="16" fill="#1F2430" stroke="#343B4A"/>
+      <circle cx="104" cy="186" r="18" fill="#F3F4F6"/>
+      <text x="104" y="192" text-anchor="middle" font-size="16" font-weight="700" fill="#0F1115">2</text>
+      <text x="140" y="179" font-size="17" font-weight="700" fill="#F7F8FA">Host loaded</text>
+      <text x="140" y="203" font-size="13" fill="#C8CEDB">Tools and server routes exist in this host process.</text>
+    </g>
+    <line x1="380" y1="229" x2="380" y2="256" stroke="#8B94A7" stroke-width="2" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="70" y="262" width="620" height="82" rx="16" fill="#1F2430" stroke="#343B4A"/>
+      <circle cx="104" cy="303" r="18" fill="#F3F4F6"/>
+      <text x="104" y="309" text-anchor="middle" font-size="16" font-weight="700" fill="#0F1115">3</text>
+      <text x="140" y="296" font-size="17" font-weight="700" fill="#F7F8FA">Client mounted</text>
+      <text x="140" y="320" font-size="13" fill="#C8CEDB">The UI entry and its slots exist in the current page.</text>
+    </g>
+    <line x1="380" y1="346" x2="380" y2="373" stroke="#8B94A7" stroke-width="2" marker-end="url(#arrow)"/>
+    <g>
+      <rect x="70" y="379" width="620" height="82" rx="16" fill="#1F2430" stroke="#343B4A"/>
+      <circle cx="104" cy="420" r="18" fill="#F3F4F6"/>
+      <text x="104" y="426" text-anchor="middle" font-size="16" font-weight="700" fill="#0F1115">4</text>
+      <text x="140" y="413" font-size="17" font-weight="700" fill="#F7F8FA">App restarted</text>
+      <text x="140" y="437" font-size="13" fill="#C8CEDB">The Electron process and native menu state are replaced.</text>
+    </g>
+    <text x="70" y="500" font-size="12" fill="#8B94A7">One uninstall action crosses all four layers.</text>
+  </g>
+</svg>

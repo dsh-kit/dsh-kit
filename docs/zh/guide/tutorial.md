@@ -1,7 +1,6 @@
 # 从零做一个真实插件
 
-端到端参考实现是 [dsh-quicknote](https://github.com/dsh-kit/dsh-quicknote)：用这套模板构建并持续维护的真实插件，
-包含输入框捕获、JSON API、四个 Agent 工具和侧栏页面。这一页是这条路径的简版。
+端到端参考实现是 [dsh-quicknote](https://github.com/dsh-kit/dsh-quicknote)：用这套模板构建并持续维护的真实插件，包含输入框捕获、JSON API、四个 Agent 工具和侧栏页面。这一页是这条路径的简版。
 
 ## 1. 生成项目
 
@@ -63,8 +62,7 @@ pnpm verify
 dsh plugin --profile <profile> add link:$PWD
 ```
 
-然后在 DSH 里：点输入框的 **记一下**，保存，打开侧栏页面，标记完成或删除。真实仓库里也有覆盖存储与
-客户端注册的测试。
+然后在 DSH 里：点输入框的 **记一下**，保存，打开侧栏页面，标记完成或删除。真实仓库里也有覆盖存储与客户端注册的测试。
 
 ## 5. 模板故意留给你的部分
 

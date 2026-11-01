@@ -26,7 +26,8 @@ async function resolveTarget(source, target) {
     return (
       (await isFile(base)) ||
       (await isFile(`${base}.md`)) ||
-      (await isFile(join(base, 'index.md')))
+      (await isFile(join(base, 'index.md'))) ||
+      (await isFile(join(root, 'docs', 'public', clean)))
     )
   }
   const base = resolve(dirname(source), clean)
