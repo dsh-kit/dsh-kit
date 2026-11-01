@@ -14,8 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
-        with:
-          version: 12
       - uses: actions/setup-node@v4
         with:
           node-version: 26
@@ -43,5 +41,5 @@ jobs:
         run: |
           case "$VERSION" in
             *-*) npm publish --provenance --access public --tag next ;;
-            *) npm publish --provenance ;;
+            *) npm publish --provenance --access public ;;
           esac
