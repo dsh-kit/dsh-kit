@@ -1,25 +1,15 @@
 # dsh-kit
 
-让 DSH 插件可以长期维护、持续迭代。
+面向 DeepSeek Harness 插件的可维护基线。
 
-DSH 插件很容易起步，也很容易失修：最小的插件只是一个 manifest 和一个 `apply` 函数，但一个能活过发布周期的仓库需要源码结构、
-构建、类型检查、双半侧测试、可复现产物、安装冒烟和 agent 可读的上下文。`dsh-kit` 把这些变成默认。
+`dsh-kit` 生成一个已经具备结构、构建、类型检查、测试、可复现产物和 agent 上下文的 DSH 插件。一条命令开始，
+之后按工程化的方式维护。
 
-状态：预发布，版本 0.1.0。生成器与模板已端到端通过 `pnpm verify`；发布说明见 [CHANGELOG.md](CHANGELOG.md)，
-路线图见 [ROADMAP.zh.md](ROADMAP.zh.md)。
-
-站点：https://dsh-kit.dev（源码在 `docs/`，英文 + 中文）。仓库：https://github.com/dsh-kit/dsh-kit。
-
-## 你将获得
-
-- TypeScript + React 19（TSX），strict；当前工具链（`tsc`、`oxlint`、`oxfmt`、`vitest`、`tsdown`）；
-- `src/host` + `src/client` + `src/shared`，ModuleLoader 包装由 `tsdown.config.ts` 生成，源码不出现；
-- 宿主半侧与客户端 slot 注册的测试；
-- `pnpm verify` = 格式检查 → lint → 类型 → 测试 → 构建 → 打包；
-- `AGENTS.md`、`llms.txt`、locale 元数据、图标、CI、发布清单；
-- 一个生成器：TTY 上交互、`--yes` 时非交互。
+**状态：** 预发布 0.1.0 · [更新日志](CHANGELOG.md) · [路线图](ROADMAP.zh.md) · [English](README.md)
 
 ## 快速开始
+
+需要 Node 24+（推荐 Node 26 LTS）和 pnpm 12；npm 也可用。
 
 ```bash
 pnpm create dsh-kit my-plugin
@@ -28,26 +18,32 @@ pnpm install
 pnpm verify
 ```
 
-npm 也可用：`npm create dsh-kit@latest` / `npm run verify`。
-
-然后安装到 profile：
+然后安装到 DSH profile：
 
 ```bash
 dsh plugin --profile <profile> add link:$PWD
 ```
 
-## 目录
+## 你将获得
 
-```text
-dsh-kit/
-├── template/            # 生成器复制的模板，占位符是 __UPPER__
-├── packages/create-dsh-kit/  # 生成器 + 模板
-└── docs/rationale.md    # 为什么做这个
-```
+- TypeScript + React 19（TSX），strict；
+- `src/host`、`src/client`、`src/shared`，ModuleLoader 包装由构建生成；
+- 宿主半侧与客户端 slot 注册的测试；
+- `pnpm verify`：格式、lint、类型检查、测试、构建、打包；
+- `AGENTS.md`、`llms.txt`、locale 元数据、图标、CI 与发布清单。
 
-## 语言
+## 用 dsh-kit 构建
 
-英文是主要语言，中文是镜像。欢迎补翻译；新增文档请提供英文原版与 `*.zh.md`。
+- [dsh-quicknote](https://github.com/dsh-kit/dsh-quicknote)：输入框随手记、笔记页面、四个 Agent 工具。
+  这套模板的端到端参考实现。
+
+## 文档
+
+- [快速开始](docs/zh/guide/quick-start.md)
+- [教程：从零做一个真实插件](docs/zh/guide/tutorial.md)
+- [为什么选择 dsh-kit](docs/zh/guide/why.md)
+- [参与贡献](CONTRIBUTING.md) · [发布](PUBLISHING.md)
+- 站点：<https://dsh-kit.dev> · 仓库：<https://github.com/dsh-kit/dsh-kit>
 
 ## 许可
 
