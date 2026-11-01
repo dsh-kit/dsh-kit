@@ -6,6 +6,9 @@ date: 2026-11-01
 
 # Desktop agents are not web apps in a window
 
+> **Desktop agent lifecycle · Part 1 of 2**  
+> Next: [Reload is a spectrum](/blog/reload-failure-modes).
+
 A desktop agent looks like a web app with a native shell. Under that shell it usually shares the same agent loop,
 the same tools, the same session store and often the same UI as the browser build.
 

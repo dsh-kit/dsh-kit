@@ -32,6 +32,7 @@ export default defineConfig({
       link: '/zh/',
       themeConfig: {
         editLink: { pattern: editPattern, text: '在 GitHub 上编辑此页' },
+        lastUpdatedText: '最后更新',
         docFooter: { prev: '上一页', next: '下一页' },
         outline: { label: '本页目录' },
         sidebarMenuLabel: '菜单',
@@ -49,7 +50,10 @@ export default defineConfig({
         ],
         sidebar: {
           '/zh/blog/': [
-            { text: '博客', items: [{ text: '桌面 Agent 不是 Web 套壳', link: '/zh/blog/desktop-agents-not-web-apps' }] }
+            { text: '博客', items: [
+              { text: '重载不是布尔值', link: '/zh/blog/reload-failure-modes' },
+              { text: '桌面 Agent 不是 Web 套壳', link: '/zh/blog/desktop-agents-not-web-apps' }
+            ] }
           ],
           '/zh/guide/': [
             {
@@ -96,7 +100,10 @@ export default defineConfig({
     ],
     sidebar: {
       '/blog/': [
-        { text: 'Blog', items: [{ text: 'Desktop agents are not web apps in a window', link: '/blog/desktop-agents-not-web-apps' }] }
+        { text: 'Blog', items: [
+          { text: 'Reload is a spectrum', link: '/blog/reload-failure-modes' },
+          { text: 'Desktop agents are not web apps in a window', link: '/blog/desktop-agents-not-web-apps' }
+        ] }
       ],
       '/guide/': [
         {
