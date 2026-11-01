@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 — 2026-11-01
+
+First release through npm Trusted Publishing, with provenance.
+
+- No generator behavior changes
+- Published from the protected `release.yml` workflow
+
 ## 0.1.0 — 2026-11-01
 
 First public version of the generator.
