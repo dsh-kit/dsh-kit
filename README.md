@@ -1,5 +1,8 @@
 # dsh-kit
 
+[![npm](https://img.shields.io/npm/v/create-dsh-kit)](https://www.npmjs.com/package/create-dsh-kit)
+[![release](https://img.shields.io/github/v/release/dsh-kit/dsh-kit?label=release)](https://github.com/dsh-kit/dsh-kit/releases)
+
 A maintainable baseline for DeepSeek Harness plugins.
 
 `dsh-kit` generates a DSH plugin with the layout, build, type checking, tests, reproducible artifact and

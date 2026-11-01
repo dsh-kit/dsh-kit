@@ -24,7 +24,8 @@ This project keeps the repository on GitHub and the package on npm. They have di
    npm view create-dsh-kit dist.integrity
    npm create dsh-kit@latest /tmp/release-check -- --author ci
    ```
-4. Create the GitHub Release from the tag, using the `CHANGELOG.md` section as notes.
+4. `release.yml` creates the GitHub Release from the `CHANGELOG.md` section, with the npm link and install command.
+5. Review the generated release page after the workflow finishes.
 
 ## First publish
 
