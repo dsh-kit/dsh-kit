@@ -1,0 +1,47 @@
+{
+  "name": "create-dsh-kit",
+  "version": "0.1.0",
+  "description": "Scaffold a DeepSeek Harness plugin with TypeScript, React 19, tests, build, CI and agent-ready docs.",
+  "license": "MIT",
+  "type": "module",
+  "author": "dsh-kit contributors",
+  "homepage": "https://dsh-kit.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsh-kit/dsh-kit.git",
+    "directory": "packages/create-dsh-kit"
+  },
+  "bugs": {
+    "url": "https://github.com/dsh-kit/dsh-kit/issues"
+  },
+  "bin": {
+    "create-dsh-kit": "./index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "preflight.mjs",
+    "template",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "preflight": "node preflight.mjs",
+    "pack:check": "npm pack --dry-run",
+    "prepublishOnly": "node preflight.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "create",
+    "scaffold",
+    "template",
+    "typescript"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

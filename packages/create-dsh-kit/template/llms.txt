@@ -1,0 +1,30 @@
+# __PKG__
+
+> __DESC_EN__
+
+## Install
+
+    dsh plugin --profile <profile> add __PKG__
+
+## Verify
+
+    dsh --profile <profile> --dump-config | grep -A2 "id: __PLUGIN_ID__"
+
+## Develop
+
+    pnpm install
+    pnpm verify
+
+## Read next
+
+- README.md — user guide
+- AGENTS.md — repository rules and invariants
+- src/host/ — Host half
+- src/client/ — browser half
+- tests/ — both suites
+
+## Contracts
+
+- Package: __PKG__
+- Patch row: `__PLUGIN_ID__`
+- Client module id: `__PKG__`

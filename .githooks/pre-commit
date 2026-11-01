@@ -1,0 +1,15 @@
+#!/bin/sh
+# Block a commit that contains a secret. CI runs the same scan over the full history.
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "gitleaks is not installed; skipping the local secret scan (CI still runs it)" >&2
+  exit 0
+fi
+
+if gitleaks protect --staged --redact; then
+  exit 0
+fi
+if gitleaks git --pre-commit --redact; then
+  exit 0
+fi
+echo "secret scan failed: remove the secret, then re-stage" >&2
+exit 1

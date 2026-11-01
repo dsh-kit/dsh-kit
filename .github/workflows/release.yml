@@ -1,0 +1,44 @@
+name: release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+  id-token: write # npm Trusted Publishing exchanges this for a short-lived token
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 26
+          registry-url: https://registry.npmjs.org
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Tag matches the package version
+        run: |
+          VERSION="$(node -p "require('./packages/create-dsh-kit/package.json').version")"
+          test "v$VERSION" = "$GITHUB_REF_NAME" || {
+            echo "tag $GITHUB_REF_NAME does not match version $VERSION"
+            exit 1
+          }
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+      - run: pnpm check
+      - name: Generate and verify a project from the package
+        run: |
+          node packages/create-dsh-kit/index.mjs /tmp/dsh-release-check --name dsh-release-check --author ci --yes
+          cd /tmp/dsh-release-check
+          pnpm install
+          pnpm verify
+      - name: Publish
+        working-directory: packages/create-dsh-kit
+        run: |
+          case "$VERSION" in
+            *-*) npm publish --provenance --tag next ;;
+            *) npm publish --provenance ;;
+          esac

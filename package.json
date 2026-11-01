@@ -1,0 +1,37 @@
+{
+  "name": "dsh-kit-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Generator, template and documentation for maintainable DeepSeek Harness plugins.",
+  "license": "MIT",
+  "author": "dsh-kit contributors",
+  "homepage": "https://dsh-kit.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsh-kit/dsh-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dsh-kit/dsh-kit/issues"
+  },
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": ">=24"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "scaffold",
+    "template"
+  ],
+  "scripts": {
+    "test": "pnpm --filter create-dsh-kit test",
+    "preflight": "pnpm --filter create-dsh-kit preflight",
+    "pack:check": "pnpm --filter create-dsh-kit pack:check",
+    "docs:dev": "pnpm --filter dsh-kit-docs dev",
+    "docs:build": "pnpm --filter dsh-kit-docs build",
+    "check": "pnpm test && pnpm preflight && node scripts/check-docs.mjs && node scripts/check-consistency.mjs && node scripts/check-links.mjs",
+    "verify:template": "node scripts/verify-template.mjs"
+  }
+}

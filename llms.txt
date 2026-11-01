@@ -1,0 +1,28 @@
+# dsh-kit
+
+> Generator, template and verification baseline for DeepSeek Harness plugins.
+
+## Repository
+
+https://github.com/dsh-kit/dsh-kit
+
+## Commands
+
+    pnpm install
+    pnpm check
+    pnpm verify:template
+    pnpm docs:build
+
+## Read next
+
+- README.md — project overview and quick start
+- AGENTS.md — repository rules and commands
+- CONTRIBUTING.md — review, merge and SSOT policy
+- ROADMAP.md — direction, not a schedule
+- docs/guide/quick-start.md — the user-facing guide
+
+## Contracts
+
+- Package: create-dsh-kit
+- Node >=24; pnpm 12 (npm fallback)
+- Generated project: src/host, src/client, tests, lib, AGENTS.md, llms.txt

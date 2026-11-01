@@ -1,0 +1,15 @@
+#!/bin/sh
+# Local guard: main only moves through a reviewed pull request.
+# Override once, deliberately: ALLOW_MAIN_PUSH=1 git push ...
+while read -r local_ref local_sha remote_ref remote_sha; do
+  case "$remote_ref" in
+    refs/heads/main)
+      if [ "${ALLOW_MAIN_PUSH:-0}" != "1" ]; then
+        echo "direct push to main is blocked; open a pull request instead" >&2
+        echo "(ALLOW_MAIN_PUSH=1 overrides this for a deliberate rewrite)" >&2
+        exit 1
+      fi
+      ;;
+  esac
+done
+exit 0

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <style>
+    .tile { fill: #0f1115; }
+    .shape { fill: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      .tile { fill: #f3f4f6; }
+      .shape { fill: #0f1115; }
+    }
+  </style>
+  <rect class="tile" width="512" height="512" rx="116"/>
+  <rect class="shape" x="132" y="128" width="96" height="256" rx="48"/>
+  <rect class="shape" x="276" y="128" width="96" height="112" rx="48"/>
+  <rect class="shape" x="276" y="272" width="96" height="112" rx="48" fill-opacity="0.55"/>
+</svg>

@@ -1,0 +1,28 @@
+name: Roadmap task
+description: Pick up a milestone item or propose a scoped piece of work.
+labels: ['roadmap']
+body:
+  - type: dropdown
+    id: milestone
+    attributes:
+      label: Milestone
+      options: [M1, M2, M3, Not sure]
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Observable outcome
+      description: What can a stranger check when this is done? One or two checks, not an implementation plan.
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Proposed approach
+      description: Files or commands you expect to touch, and anything you are unsure about.
+  - type: input
+    id: command
+    attributes:
+      label: Verification command
+      placeholder: 'pnpm verify / node --test ... / npm create dsh-kit@latest ...'

@@ -1,0 +1,39 @@
+name: Bug report
+description: The generator, the template or the site is wrong.
+labels: ['bug']
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: 'create-dsh-kit 0.1.0'
+    validations:
+      required: true
+  - type: input
+    id: dsh
+    attributes:
+      label: DSH version
+      placeholder: '0.2.1-rc.5'
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. npm create dsh-kit@latest my-plugin
+        2. pnpm install && pnpm verify
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+      description: Paste the command output, not a screenshot of text.
+    validations:
+      required: true
