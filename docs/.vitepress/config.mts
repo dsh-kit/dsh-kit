@@ -38,7 +38,8 @@ export default defineConfig({
         },
         nav: [
           { text: '指南', link: '/zh/guide/quick-start' },
-          { text: '为什么', link: '/zh/guide/why' }
+          { text: '为什么', link: '/zh/guide/why' },
+          { text: '插件', link: '/zh/plugins/' }
         ],
         sidebar: {
           '/zh/guide/': [
@@ -78,7 +79,8 @@ export default defineConfig({
     outline: { level: [2, 3] },
     nav: [
       { text: 'Guide', link: '/guide/quick-start' },
-      { text: 'Why', link: '/guide/why' }
+      { text: 'Why', link: '/guide/why' },
+      { text: 'Plugins', link: '/plugins/' }
     ],
     sidebar: {
       '/guide/': [

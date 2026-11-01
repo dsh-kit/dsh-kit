@@ -42,6 +42,7 @@ dsh plugin --profile <profile> add link:$PWD
 - [Quick start](docs/guide/quick-start.md)
 - [Tutorial: from zero to a working plugin](docs/guide/tutorial.md)
 - [Why dsh-kit](docs/guide/why.md)
+- [Curated plugins](docs/plugins/index.md)
 - [Contributing](CONTRIBUTING.md) · [Publishing](PUBLISHING.md)
 - Site: <https://dsh-kit.dev> · Repository: <https://github.com/dsh-kit/dsh-kit>
 

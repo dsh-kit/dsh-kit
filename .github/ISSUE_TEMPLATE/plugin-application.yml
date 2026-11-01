@@ -1,0 +1,53 @@
+name: Plugin application
+description: Propose a plugin for the dsh-kit curated list.
+labels: ['plugin-application']
+body:
+  - type: input
+    id: repository
+    attributes:
+      label: Repository
+      placeholder: https://github.com/...
+    validations:
+      required: true
+  - type: input
+    id: docs
+    attributes:
+      label: Documentation URL
+      description: The plugin's own docs site, not a README.
+      placeholder: https://...
+    validations:
+      required: true
+  - type: input
+    id: dsh
+    attributes:
+      label: DSH version tested
+      placeholder: 0.2.1-rc.5
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification commands
+      description: The exact commands that prove the artifact installs and works.
+    validations:
+      required: true
+  - type: textarea
+    id: maintenance
+    attributes:
+      label: Maintenance
+      description: Maintainer, release cadence, known limitations.
+    validations:
+      required: true
+  - type: checkboxes
+    id: criteria
+    attributes:
+      label: Criteria
+      options:
+        - label: Generated from create-dsh-kit or a documented fork
+          required: true
+        - label: Own docs site with install, usage and reference pages
+          required: true
+        - label: CI is green and the artifact is checked
+          required: true
+        - label: Local data paths and destructive actions are documented
+          required: true
