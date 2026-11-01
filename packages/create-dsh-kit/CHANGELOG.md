@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+- Generated plugins now include the tag-driven release workflow
+- Install docs distinguish the app-managed desktop profile from CLI/web profiles
+- The package homepage points to dsh-kit.dev
+
 ## 0.1.1
 
 First release through npm Trusted Publishing, with provenance.

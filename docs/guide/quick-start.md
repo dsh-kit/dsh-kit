@@ -56,14 +56,14 @@ npm run verify
 ## Install into DSH
 
 ```bash
-dsh plugin --profile <profile> add link:$PWD
-dsh --profile <profile> --dump-config | grep -A2 "id: my-plugin"
+dsh plugin --profile web add link:$PWD
+dsh --profile web --dump-config | grep -A2 "id: my-plugin"
 ```
 
 `link:` installs the working copy for development; a published plugin is installed by package name.
 
-Desktop profiles are app-managed: add the package to `dsh.profile.bundles` and the dependency, run
-`pnpm install` in the profile, then restart DSH.
+For the desktop app, use the in-app plugin page. The `desktop` profile is app-managed and cannot be modified by
+`dsh plugin`.
 
 ## What you get
 

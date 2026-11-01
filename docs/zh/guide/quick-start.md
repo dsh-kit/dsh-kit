@@ -56,13 +56,13 @@ npm run verify
 ## 安装到 DSH
 
 ```bash
-dsh plugin --profile <profile> add link:$PWD
-dsh --profile <profile> --dump-config | grep -A2 "id: my-plugin"
+dsh plugin --profile web add link:$PWD
+dsh --profile web --dump-config | grep -A2 "id: my-plugin"
 ```
 
 `link:` 用于本地开发安装；已发布的插件直接用包名安装。
 
-桌面 profile 由应用托管：把包加进 `dsh.profile.bundles` 与依赖，在 profile 里执行 `pnpm install`，然后重启。
+桌面端请使用应用内插件页；`desktop` profile 由应用管理，不能用 `dsh plugin` 修改。
 
 ## 目录
 

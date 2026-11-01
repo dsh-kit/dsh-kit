@@ -8,7 +8,7 @@ Capture a note from the DSH composer, keep it out of the way, and manage the lis
 
 - **Documentation:** <https://dsh-kit.github.io/dsh-quicknote/>
 - **Source:** <https://github.com/dsh-kit/dsh-quicknote>
-- **Install (after release):** `dsh plugin --profile <profile> add dsh-quicknote`
+- **Install:** desktop app → plugin page; CLI/web → `dsh plugin --profile web add dsh-quicknote`
 - **Reference for:** composer capture, host JSON API, Agent tools, sidebar page, tests.
 
 ## Apply

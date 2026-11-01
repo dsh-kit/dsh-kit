@@ -18,5 +18,5 @@
 The `release` workflow checks that the tag matches `package.json`, runs `pnpm verify`, and publishes with
 provenance. It needs no `NPM_TOKEN`.
 
-For local development, `dsh plugin --profile <profile> add link:$PWD` installs the working copy instead of a
+For local development, `dsh plugin --profile web add link:$PWD` installs the working copy instead of a
 published version.

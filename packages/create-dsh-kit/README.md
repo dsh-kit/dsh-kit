@@ -22,4 +22,4 @@ pnpm install
 pnpm verify   # format → lint → typecheck → test → build → pack
 ```
 
-Documentation: <https://github.com/dsh-kit/dsh-kit/tree/main/docs>. Repository: <https://github.com/dsh-kit/dsh-kit>.
+Documentation: <https://dsh-kit.dev/guide/quick-start>. Repository: <https://github.com/dsh-kit/dsh-kit>.

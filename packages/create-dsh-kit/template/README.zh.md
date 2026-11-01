@@ -11,10 +11,10 @@ Node 24+，pnpm 12（npm 可兜底）。
 ## 安装
 
 ```bash
-dsh plugin --profile <profile> add __PKG__
+dsh plugin --profile web add __PKG__
 ```
 
-桌面 profile 由应用托管：把 `__PKG__` 加进 `dsh.profile.bundles` 与依赖，执行 `pnpm install`，重启 DSH。
+桌面端请使用应用内插件页；`desktop` profile 由应用管理。
 
 ## 验证
 

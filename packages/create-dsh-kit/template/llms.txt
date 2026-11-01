@@ -4,7 +4,7 @@
 
 ## Install
 
-    dsh plugin --profile <profile> add __PKG__
+    dsh plugin --profile web add __PKG__
 
 ## Verify
 

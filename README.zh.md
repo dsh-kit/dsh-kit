@@ -5,7 +5,7 @@
 `dsh-kit` 生成一个已经具备结构、构建、类型检查、测试、可复现产物和 agent 上下文的 DSH 插件。一条命令开始，
 之后按工程化的方式维护。
 
-**状态：** 预发布 0.1.1 · [更新日志](CHANGELOG.md) · [路线图](ROADMAP.zh.md) · [English](README.md)
+**状态：** 预发布 0.1.2 · [更新日志](CHANGELOG.md) · [路线图](ROADMAP.zh.md) · [English](README.md)
 
 ## 快速开始
 
@@ -18,11 +18,13 @@ pnpm install
 pnpm verify
 ```
 
-然后安装到 DSH profile：
+然后安装到 CLI / web profile：
 
 ```bash
-dsh plugin --profile <profile> add link:$PWD
+dsh plugin --profile web add link:$PWD
 ```
+
+桌面端请使用应用内插件页；`desktop` profile 由应用管理。
 
 ## 你将获得
 

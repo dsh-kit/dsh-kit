@@ -11,11 +11,10 @@ Node 24+ and pnpm 12 (npm works as a fallback).
 ## Install
 
 ```bash
-dsh plugin --profile <profile> add __PKG__
+dsh plugin --profile web add __PKG__
 ```
 
-Desktop profiles are managed by the app: add `__PKG__` to `dsh.profile.bundles` and the dependency, then
-`pnpm install` in the profile and restart DSH.
+For the desktop app, use its plugin page; the `desktop` profile is managed by the application.
 
 ## Verify
 
