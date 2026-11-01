@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "author": "dsh-kit contributors",
-  "homepage": "https://dsh-kit.dev",
+  "homepage": "https://github.com/dsh-kit/dsh-kit#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dsh-kit/dsh-kit.git",
@@ -21,7 +21,9 @@
     "index.mjs",
     "preflight.mjs",
     "template",
-    "README.md"
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "engines": {
     "node": ">=24"
@@ -30,7 +32,7 @@
     "test": "node --test test/*.test.mjs",
     "preflight": "node preflight.mjs",
     "pack:check": "npm pack --dry-run",
-    "prepublishOnly": "node preflight.mjs"
+    "prepublishOnly": "node preflight.mjs && npm test"
   },
   "keywords": [
     "dsh",
