@@ -62,7 +62,7 @@ ctx.slots.inject('main', () => ctx.slots.register({ ... }, Page))
 
 ```bash
 pnpm verify
-dsh plugin --profile <profile> add link:$PWD
+dsh plugin --profile web add link:$PWD
 ```
 
 Then in DSH: click **Note** in the composer, save, open the sidebar page, mark the note done and delete it.

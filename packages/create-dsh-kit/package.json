@@ -1,11 +1,11 @@
 {
   "name": "create-dsh-kit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Scaffold a DeepSeek Harness plugin with TypeScript, React 19, tests, build, CI and agent-ready docs.",
   "license": "MIT",
   "type": "module",
   "author": "dsh-kit contributors",
-  "homepage": "https://github.com/dsh-kit/dsh-kit#readme",
+  "homepage": "https://dsh-kit.dev",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dsh-kit/dsh-kit.git",

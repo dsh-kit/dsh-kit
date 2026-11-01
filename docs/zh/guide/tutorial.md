@@ -59,7 +59,7 @@ ctx.slots.inject('main', () => ctx.slots.register({ ... }, Page))
 
 ```bash
 pnpm verify
-dsh plugin --profile <profile> add link:$PWD
+dsh plugin --profile web add link:$PWD
 ```
 
 然后在 DSH 里：点输入框的 **记一下**，保存，打开侧栏页面，标记完成或删除。真实仓库里也有覆盖存储与客户端注册的测试。

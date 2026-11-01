@@ -5,7 +5,7 @@ A maintainable baseline for DeepSeek Harness plugins.
 `dsh-kit` generates a DSH plugin with the layout, build, type checking, tests, reproducible artifact and
 agent-readable context already in place. Start with one command; keep the repository maintainable.
 
-**Status:** pre-release, 0.1.1 · npm package `create-dsh-kit` · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md) · [中文](README.zh.md)
+**Status:** pre-release, 0.1.2 · npm package `create-dsh-kit` · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md) · [中文](README.zh.md)
 
 ## Quick start
 
@@ -18,11 +18,13 @@ pnpm install
 pnpm verify
 ```
 
-Then install it into a DSH profile:
+Then install it into a CLI/web profile:
 
 ```bash
-dsh plugin --profile <profile> add link:$PWD
+dsh plugin --profile web add link:$PWD
 ```
+
+For the desktop app, use its plugin page; the `desktop` profile is managed by the application.
 
 ## What you get
 

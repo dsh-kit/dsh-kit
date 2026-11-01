@@ -40,6 +40,9 @@ pnpm install
 pnpm docs:dev    # http://127.0.0.1:4173
 ```
 
+The documentation site lives in `docs/` and is built with VitePress. Add an English page first and a `zh/` mirror
+in the same change.
+
 ## Secret scan
 
 ```bash
@@ -107,8 +110,3 @@ parallel review, remove it with `git worktree remove <path>` when the branch is 
 - The project is licensed to `dsh-kit contributors`; do not paste another project's copyright line.
 - Commit with a GitHub identity you are comfortable publishing.
 - `pnpm preflight` fails on absolute user paths, private keys and identity leaks.
-
-## Site
-
-The documentation site lives in `docs/` and is built with VitePress. `pnpm docs:dev` serves it locally; the
-Pages workflow builds `docs/.vitepress/dist`. Add an English page first and a `zh/` mirror in the same change.

@@ -8,7 +8,7 @@
 
 - **文档：** <https://dsh-kit.github.io/dsh-quicknote/>
 - **源码：** <https://github.com/dsh-kit/dsh-quicknote>
-- **安装（发布后）：** `dsh plugin --profile <profile> add dsh-quicknote`
+- **安装：** 桌面端用应用内插件页；CLI/web 用 `dsh plugin --profile web add dsh-quicknote`
 - **可作为参考：** 输入框捕获、宿主 JSON API、Agent 工具、侧栏页面、测试。
 
 ## 申请收录
