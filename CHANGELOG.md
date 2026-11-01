@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4 — 2026-11-02
+
+- Generated verify commands now use a real `web` profile
+
 ## 0.1.3 — 2026-11-02
 
 - Generator next steps now use a real `web` profile and name the app-managed desktop path

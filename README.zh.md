@@ -5,7 +5,7 @@
 `dsh-kit` 生成一个已经具备结构、构建、类型检查、测试、可复现产物和 agent 上下文的 DSH 插件。一条命令开始，
 之后按工程化的方式维护。
 
-**状态：** 预发布 0.1.3 · [更新日志](CHANGELOG.md) · [路线图](ROADMAP.zh.md) · [English](README.md)
+**状态：** 预发布 0.1.4 · [更新日志](CHANGELOG.md) · [路线图](ROADMAP.zh.md) · [English](README.md)
 
 ## 快速开始
 

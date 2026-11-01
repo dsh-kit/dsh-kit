@@ -88,7 +88,7 @@ pnpm build         # regenerate lib/
 ```
 
 After a client change, rebuild and restart DSH; the web shell caches the bundle per boot. Use
-`dsh --profile <profile> --dump-config` to confirm the row and the client entry. Browser DevTools shows the
+`dsh --profile web --dump-config` to confirm the row and the client entry. Browser DevTools shows the
 plugin's console errors; the Host log shows route/tool registration failures.
 
 ## 7. Publish

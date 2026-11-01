@@ -19,7 +19,7 @@ For the desktop app, use its plugin page; the `desktop` profile is managed by th
 ## Verify
 
 ```bash
-dsh --profile <profile> --dump-config | grep -A2 "id: __PLUGIN_ID__"
+dsh --profile web --dump-config | grep -A2 "id: __PLUGIN_ID__"
 ```
 
 ## Develop
