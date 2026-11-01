@@ -38,6 +38,7 @@ export default defineConfig({
         },
         nav: [
           { text: '指南', link: '/zh/guide/quick-start' },
+          { text: 'Agent', link: '/zh/guide/agents' },
           { text: '为什么', link: '/zh/guide/why' },
           { text: '插件', link: '/zh/plugins/' }
         ],
@@ -47,6 +48,7 @@ export default defineConfig({
               text: '指南',
               items: [
                 { text: '快速开始', link: '/zh/guide/quick-start' },
+                { text: '面向 Agent', link: '/zh/guide/agents' },
                 { text: '教程', link: '/zh/guide/tutorial' },
                 { text: '为什么选 dsh-kit', link: '/zh/guide/why' },
                 { text: '工具链', link: '/zh/guide/toolchain' }
@@ -79,6 +81,7 @@ export default defineConfig({
     outline: { level: [2, 3] },
     nav: [
       { text: 'Guide', link: '/guide/quick-start' },
+      { text: 'Agents', link: '/guide/agents' },
       { text: 'Why', link: '/guide/why' },
       { text: 'Plugins', link: '/plugins/' }
     ],
@@ -88,6 +91,7 @@ export default defineConfig({
           text: 'Guide',
           items: [
             { text: 'Quick start', link: '/guide/quick-start' },
+            { text: 'For agents', link: '/guide/agents' },
             { text: 'Tutorial', link: '/guide/tutorial' },
             { text: 'Why dsh-kit', link: '/guide/why' },
             { text: 'Toolchain', link: '/guide/toolchain' }
