@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+First release through npm Trusted Publishing, with provenance.
+
+- No generator behavior changes
+
 ## 0.1.0
 
 First release.
