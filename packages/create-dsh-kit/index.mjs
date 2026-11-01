@@ -176,7 +176,7 @@ async function rewrite(directory) {
       await rewrite(full)
       continue
     }
-    if (!/\.(tsx?|mjs|json|ya?ml|md|txt|svg)$/.test(entry.name)) continue
+    if (!/\.(tsx?|mjs|json|ya?ml|md|txt|svg)$/.test(entry.name) && entry.name !== 'LICENSE') continue
     let text = await readFile(full, 'utf8')
     for (const [key, value] of Object.entries(replacements)) text = text.split(key).join(value)
     await writeFile(full, text)

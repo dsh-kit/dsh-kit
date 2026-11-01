@@ -28,6 +28,9 @@ test('generates a project with the package name and no placeholders', async () =
     assert.match(patch, /name: dsh-test-plugin/)
     assert.ok(await readFile(join(dir, '.gitignore'), 'utf8'))
     assert.ok(await readFile(join(dir, 'PUBLISHING.md'), 'utf8'))
+    const license = await readFile(join(dir, 'LICENSE'), 'utf8')
+    assert.match(license, /Copyright \(c\) 2026 tester/)
+    assert.doesNotMatch(license, /__AUTHOR__/)
     async function assertNoPlaceholders(directory) {
       for (const entry of await readdir(directory, { withFileTypes: true })) {
         if (entry.name === 'node_modules' || entry.name === '.git') continue
@@ -36,7 +39,7 @@ test('generates a project with the package name and no placeholders', async () =
           await assertNoPlaceholders(full)
           continue
         }
-        if (!/\.(tsx?|mjs|json|ya?ml|md|txt|svg)$/.test(entry.name)) continue
+        if (!/\.(tsx?|mjs|json|ya?ml|md|txt|svg)$/.test(entry.name) && entry.name !== 'LICENSE') continue
         const text = await readFile(full, 'utf8')
         assert.doesNotMatch(text, /__[A-Z_]+__/, `${full} still contains a placeholder`)
       }

@@ -25,6 +25,12 @@ Site: https://dsh-kit.dev (source in `docs/`, English + 中文). Repository: htt
 - `AGENTS.md`, `llms.txt`, locale metadata, icon, CI, release checklist.
 - One generator: interactive on a TTY, non-interactive with `--yes`.
 
+## A real plugin
+
+[dsh-quicknote](https://github.com/dsh-kit/dsh-quicknote) is built from this template and maintained as a real
+plugin: composer capture, a JSON API, four Agent tools, a sidebar page and tests. It is the end-to-end reference
+for what the template is expected to deliver.
+
 ## Quick start
 
 ```bash
