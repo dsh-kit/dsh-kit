@@ -4,8 +4,13 @@ Articles on building a maintainable plugin ecosystem around DeepSeek Harness: de
 lifecycle, control planes and developer experience.
 
 <div class="blog-list">
-<a class="blog-card" href="/blog/reload-failure-modes">
-<h2>Reload is a spectrum: failure modes of desktop plugin lifecycles</h2>
+<a class="blog-card" href="/blog/verification-at-agent-scale">
+<h2>Verification at agent scale: what DSH’s test architecture actually enforces</h2>
+<p>Layered evidence, real compositions and auditable snapshots: how an agent-heavy codebase decides what counts as proof.</p>
+<div class="meta">2026-11-01 · testing, engineering governance, architecture</div>
+</a>
+<a class="blog-card" href="/blog/plugin-lifecycle-failure-modes">
+<h2>Plugin lifecycle failure modes</h2>
 <p>Seven ways the profile, host, client and app layers disagree, and the contract that makes those states visible.</p>
 <div class="meta">Part 2 / 2 · 2026-11-01 · architecture, plugin lifecycle, reliability</div>
 </a>

@@ -7,7 +7,7 @@ date: 2026-11-01
 # 桌面 Agent 不是 Web 套壳
 
 > **桌面 Agent 生命周期 · 第 1 / 2 篇**  
-> 下一篇：[重载不是布尔值](/zh/blog/reload-failure-modes)。
+> 下一篇：[插件生命周期的失败模式](/zh/blog/plugin-lifecycle-failure-modes)。
 
 桌面 Agent 看起来像“Web 应用 + 原生外壳”。但外壳之下，它通常共享同一套 Agent 循环、工具、会话存储，甚至同一套 UI。
 

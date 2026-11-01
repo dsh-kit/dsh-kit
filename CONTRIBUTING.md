@@ -68,6 +68,32 @@ with provenance.
 
 See [ROLLBACK.md](ROLLBACK.md). A bad public change is reverted through a PR, not force-pushed away.
 
+## Local branch hygiene
+
+Use one short-lived branch per pull request:
+
+```text
+feat/<topic>  fix/<topic>  docs/<topic>  chore/<topic>
+```
+
+After the PR is squash-merged:
+
+```bash
+git switch main
+git pull --ff-only
+git fetch --prune
+git branch --merged main
+```
+
+Delete only branches listed by `--merged`; `git branch -d` refuses unmerged work:
+
+```bash
+git branch --merged main | grep -v '^\*' | grep -v ' main$' | xargs -r git branch -d
+```
+
+Remote branches are deleted when the PR is merged; `git fetch --prune` removes stale refs. If you use a worktree for
+parallel review, remove it with `git worktree remove <path>` when the branch is merged.
+
 ## Review and merge policy
 
 - `main` is protected: changes arrive through a pull request, not a direct push.
