@@ -78,3 +78,35 @@ The real plugin's repository also contains the tests that cover the store and th
 
 The point of the template is that layout, build, types, tests and the copy-safe capture flow are already there;
 the product is yours.
+
+## 6. Debug loop
+
+```bash
+pnpm test          # one suite
+pnpm verify        # the full gate
+pnpm build         # regenerate lib/
+```
+
+After a client change, rebuild and restart DSH; the web shell caches the bundle per boot. Use
+`dsh --profile <profile> --dump-config` to confirm the row and the client entry. Browser DevTools shows the
+plugin's console errors; the Host log shows route/tool registration failures.
+
+## 7. Publish
+
+```bash
+pnpm verify
+git tag v0.1.0
+```
+
+Check the artifact with `npm pack --dry-run` before tagging.
+
+Follow [PUBLISHING.md](https://github.com/dsh-kit/dsh-kit/blob/main/PUBLISHING.md): the GitHub repository owns
+review and history, npm owns the artifact, and CI publishes with provenance after the tag.
+
+## 8. Host it, document it, and apply for curation
+
+- Push the plugin to its own GitHub repository.
+- Give it its own documentation site (install, usage, reference), not a page on the dsh-kit site. The reference
+  implementation builds one with VitePress: <https://github.com/dsh-kit/dsh-quicknote/tree/main/docs>.
+- To join the curated list, read [CURATION.md](https://github.com/dsh-kit/dsh-kit/blob/main/CURATION.md) and open
+  a **Plugin application** issue. The list is curated, not a marketplace.

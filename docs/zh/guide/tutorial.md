@@ -74,3 +74,35 @@ dsh plugin --profile <profile> add link:$PWD
 - 发布：参考参考插件的 [PUBLISHING.md](https://github.com/dsh-kit/dsh-quicknote/blob/main/PUBLISHING.md)。
 
 模板负责的是结构、构建、类型、测试和“不弄丢文字”的捕获流程；产品由你决定。
+
+## 6. 调试循环
+
+```bash
+pnpm test          # 单个测试套件
+pnpm verify        # 完整门禁
+pnpm build         # 重新生成 lib/
+```
+
+客户端改动后要重新构建并重启 DSH；web shell 每次启动会缓存 bundle。用
+`dsh --profile <profile> --dump-config` 确认插件行与客户端入口。浏览器 DevTools 看插件前端错误，
+Host 日志看路由/工具注册失败。
+
+## 7. 发布
+
+```bash
+pnpm verify
+git tag v0.1.0
+```
+
+Check the artifact with `npm pack --dry-run` before tagging.
+
+按 [PUBLISHING.md](https://github.com/dsh-kit/dsh-kit/blob/main/PUBLISHING.md)：GitHub 负责评审与历史，
+npm 负责产物，CI 在 tag 之后带 provenance 发布。
+
+## 8. 托管、文档与收录
+
+- 把插件推到独立的 GitHub 仓库；
+- 给它独立的文档站（安装、使用、参考），不要只是挂在 dsh-kit 站点下。参考实现用 VitePress：
+  <https://github.com/dsh-kit/dsh-quicknote/tree/main/docs>；
+- 想进入精选列表，阅读 [CURATION.md](https://github.com/dsh-kit/dsh-kit/blob/main/CURATION.md)，用
+  **Plugin application** 模板提交。精选列表不是插件市场。
