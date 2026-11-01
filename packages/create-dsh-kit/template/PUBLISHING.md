@@ -15,8 +15,8 @@
    git push origin v<version>
    ```
 
-The `release` workflow checks that the tag matches `package.json`, runs `pnpm verify`, and publishes with
-provenance. It needs no `NPM_TOKEN`.
+The `release` workflow checks that the tag matches `package.json`, runs `pnpm verify`, publishes with
+provenance, and creates the GitHub Release with the `CHANGELOG.md` section. It needs no `NPM_TOKEN`.
 
 For local development, `dsh plugin --profile web add link:$PWD` installs the working copy instead of a
 published version.

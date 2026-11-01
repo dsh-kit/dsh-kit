@@ -5,7 +5,7 @@ on:
     tags: ['v*']
 
 permissions:
-  contents: read
+  contents: write
   id-token: write # npm Trusted Publishing exchanges this for a short-lived token
 
 jobs:
@@ -43,3 +43,20 @@ jobs:
             *-*) npm publish --provenance --access public --tag next ;;
             *) npm publish --provenance --access public ;;
           esac
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NOTES=/tmp/release-notes.md
+          awk -v v="$VERSION" 'BEGIN { found = 0 } /^## / { if (found) exit; if (index($0, "## " v) == 1) found = 1 } found' CHANGELOG.md > "$NOTES"
+          if [ ! -s "$NOTES" ]; then printf '## Changes\n\nSee CHANGELOG.md.\n' > "$NOTES"; fi
+          printf '\n**npm:** https://www.npmjs.com/package/create-dsh-kit/v/%s\n\n```bash\nnpm create dsh-kit@latest my-plugin\n```\n' "$VERSION" >> "$NOTES"
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            echo "release $GITHUB_REF_NAME already exists"
+          else
+            case "$VERSION" in
+              *-*) gh release create "$GITHUB_REF_NAME" --title "dsh-kit v$VERSION" --notes-file "$NOTES" --prerelease ;;
+              *) gh release create "$GITHUB_REF_NAME" --title "dsh-kit v$VERSION" --notes-file "$NOTES" ;;
+            esac
+          fi
