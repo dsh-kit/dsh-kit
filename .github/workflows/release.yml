@@ -14,6 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
+        with:
+          version: 12
       - uses: actions/setup-node@v4
         with:
           node-version: 26
@@ -29,6 +31,7 @@ jobs:
           }
           echo "VERSION=$VERSION" >> "$GITHUB_ENV"
       - run: pnpm check
+      - run: pnpm pack:check
       - name: Generate and verify a project from the package
         run: |
           node packages/create-dsh-kit/index.mjs /tmp/dsh-release-check --name dsh-release-check --author ci --yes
@@ -39,6 +42,6 @@ jobs:
         working-directory: packages/create-dsh-kit
         run: |
           case "$VERSION" in
-            *-*) npm publish --provenance --tag next ;;
+            *-*) npm publish --provenance --access public --tag next ;;
             *) npm publish --provenance ;;
           esac
