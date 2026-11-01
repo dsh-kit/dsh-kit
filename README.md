@@ -37,6 +37,12 @@ dsh plugin --profile <profile> add link:$PWD
 - [dsh-quicknote](https://github.com/dsh-kit/dsh-quicknote) — composer capture, a notes page and four Agent
   tools. The end-to-end reference for this template.
 
+## For agents
+
+- [Agent setup](https://dsh-kit.dev/agent-setup/prompt.md)
+- [Machine-readable index](https://dsh-kit.dev/llms.txt)
+- Install the skill: `npx -y skills add dsh-kit/dsh-kit --skill dsh-kit --yes --global`
+
 ## Documentation
 
 - [Quick start](docs/guide/quick-start.md)

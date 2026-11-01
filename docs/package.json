@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vitepress dev --port 4173 --host 127.0.0.1",
     "build": "vitepress build",
-    "preview": "vitepress preview --port 4173 --host 127.0.0.1"
+    "preview": "vitepress preview --port 4173 --host 127.0.0.1",
+    "predev": "node scripts/sync-llms.mjs",
+    "prebuild": "node scripts/sync-llms.mjs"
   },
   "devDependencies": {
     "vitepress": "^1.6.4"
