@@ -82,7 +82,7 @@ pnpm build         # 重新生成 lib/
 ```
 
 客户端改动后要重新构建并重启 DSH；web shell 每次启动会缓存 bundle。用
-`dsh --profile <profile> --dump-config` 确认插件行与客户端入口。浏览器 DevTools 看插件前端错误，
+`dsh --profile web --dump-config` 确认插件行与客户端入口。浏览器 DevTools 看插件前端错误，
 Host 日志看路由/工具注册失败。
 
 ## 7. 发布

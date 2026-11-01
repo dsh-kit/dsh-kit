@@ -19,7 +19,7 @@ dsh plugin --profile web add __PKG__
 ## 验证
 
 ```bash
-dsh --profile <profile> --dump-config | grep -A2 "id: __PLUGIN_ID__"
+dsh --profile web --dump-config | grep -A2 "id: __PLUGIN_ID__"
 ```
 
 ## 开发

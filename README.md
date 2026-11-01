@@ -5,7 +5,7 @@ A maintainable baseline for DeepSeek Harness plugins.
 `dsh-kit` generates a DSH plugin with the layout, build, type checking, tests, reproducible artifact and
 agent-readable context already in place. Start with one command; keep the repository maintainable.
 
-**Status:** pre-release, 0.1.3 · npm package `create-dsh-kit` · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md) · [中文](README.zh.md)
+**Status:** pre-release, 0.1.4 · npm package `create-dsh-kit` · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md) · [中文](README.zh.md)
 
 ## Quick start
 
