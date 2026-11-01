@@ -64,6 +64,10 @@ are checked against those facts by `scripts/check-consistency.mjs`, and copyable
 See [PUBLISHING.md](PUBLISHING.md): GitHub owns review and history, npm owns the artifact, and CI publishes
 with provenance.
 
+## Rollback
+
+See [ROLLBACK.md](ROLLBACK.md). A bad public change is reverted through a PR, not force-pushed away.
+
 ## Review and merge policy
 
 - `main` is protected: changes arrive through a pull request, not a direct push.
