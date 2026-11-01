@@ -32,15 +32,21 @@ pnpm docs:build
 - English docs first, Chinese mirror in the same change.
 - Run `pnpm test` and `pnpm preflight` before committing.
 
-## Before the first public release
+## Release
 
-The repository carries exactly **one** commit. Until the first public release, do not create follow-up commits:
+`main` is protected. Open a pull request, wait for `verify (24)`, `verify (26)` and `gitleaks`, then squash
+merge. Release by tagging the merged commit:
 
 ```bash
-git add -A
-git commit --amend --no-edit
-ALLOW_MAIN_PUSH=1 git push --force origin main
+git tag v<version>
+git push origin v<version>
 ```
 
-After the first public release, switch to normal pull-request history; the pre-push hook keeps `main` behind
-reviews from then on.
+The tag must equal `packages/create-dsh-kit/package.json`'s version. `release.yml` runs the full gate and publishes
+with npm Trusted Publishing and provenance. See `PUBLISHING.md`.
+
+## Agent entry points
+
+- `skills/dsh-kit/SKILL.md` — installable skill for plugin work.
+- `docs/public/agent-setup/prompt.md` — one-page setup for agents.
+- `llms.txt` — machine-readable repository index.

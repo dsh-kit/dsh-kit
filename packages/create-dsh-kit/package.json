@@ -15,7 +15,7 @@
     "url": "https://github.com/dsh-kit/dsh-kit/issues"
   },
   "bin": {
-    "create-dsh-kit": "./index.mjs"
+    "create-dsh-kit": "index.mjs"
   },
   "files": [
     "index.mjs",

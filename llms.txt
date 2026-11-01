@@ -13,6 +13,11 @@ https://github.com/dsh-kit/dsh-kit
     pnpm verify:template
     pnpm docs:build
 
+## Agent setup
+
+- https://dsh-kit.dev/agent-setup/prompt.md — one-page setup for agents
+- skills/dsh-kit/SKILL.md — install with: npx -y skills add dsh-kit/dsh-kit --skill dsh-kit --yes --global
+
 ## Read next
 
 - README.md — project overview and quick start
@@ -20,6 +25,8 @@ https://github.com/dsh-kit/dsh-kit
 - CONTRIBUTING.md — review, merge and SSOT policy
 - ROADMAP.md — direction, not a schedule
 - docs/guide/quick-start.md — the user-facing guide
+- docs/guide/tutorial.md — generate, debug, install, publish and apply for curation
+- CURATION.md — curated-plugin criteria and application
 
 ## Contracts
 
