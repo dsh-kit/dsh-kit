@@ -123,6 +123,10 @@
 }
 .hero-install button:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-text-1); }
 
+@media (max-width: 959px) {
+  .hero-install { margin-left: auto; margin-right: auto; }
+}
+
 @media (max-width: 640px) {
   .hero-install { width: 100%; flex-wrap: wrap; }
   .hero-install code { white-space: normal; overflow-wrap: anywhere; }
