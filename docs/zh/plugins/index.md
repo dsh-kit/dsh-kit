@@ -13,5 +13,4 @@
 
 ## 申请收录
 
-这是精选列表，不是插件市场。先阅读 [CURATION.md](https://github.com/dsh-kit/dsh-kit/blob/main/CURATION.md)，
-再用 **Plugin application** 模板提交仓库、文档地址与验证命令。
+这是精选列表，不是插件市场。先阅读 [CURATION.md](https://github.com/dsh-kit/dsh-kit/blob/main/CURATION.md)，再用 **Plugin application** 模板提交仓库、文档地址与验证命令。

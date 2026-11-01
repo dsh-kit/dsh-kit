@@ -13,6 +13,11 @@ https://github.com/dsh-kit/dsh-kit
     pnpm verify:template
     pnpm docs:build
 
+## Blog
+
+- https://dsh-kit.dev/blog/ — engineering notes on the plugin ecosystem
+- https://dsh-kit.dev/blog/desktop-agents-not-web-apps — desktop agents, shared runtimes and lifecycle design
+
 ## Agent setup
 
 - https://dsh-kit.dev/agent-setup/prompt.md — one-page setup for agents
