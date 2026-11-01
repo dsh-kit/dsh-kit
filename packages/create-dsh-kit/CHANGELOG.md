@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- Generator next steps now use a real `web` profile and name the app-managed desktop path
+
 ## 0.1.2
 
 - Generated plugins now include the tag-driven release workflow

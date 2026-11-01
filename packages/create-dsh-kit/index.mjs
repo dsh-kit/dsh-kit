@@ -199,7 +199,8 @@ console.log(`next steps:
   cd ${target}
   pnpm install
   pnpm verify
-  dsh plugin --profile <profile> add link:$PWD
+  dsh plugin --profile web add link:$PWD
+  # desktop app: install through its plugin page; the desktop profile is app-managed
 
 npm fallback: npm install && npm run verify
 `)
