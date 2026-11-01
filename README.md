@@ -14,7 +14,7 @@ Status: pre-release, version 0.1.0. The generator and template pass `pnpm verify
 [中文](README.zh.md)
 
 Site: https://dsh-kit.dev (source in `docs/`, English + 中文). Repository: https://github.com/dsh-kit/dsh-kit. Roadmap: [ROADMAP.md](ROADMAP.md) ·
-[中文](ROADMAP.zh.md). Contributions: [CONTRIBUTING.md](CONTRIBUTING.md).
+[中文](ROADMAP.zh.md). Contributions: [CONTRIBUTING.md](CONTRIBUTING.md). Releasing: [PUBLISHING.md](PUBLISHING.md).
 
 ## What you get
 
