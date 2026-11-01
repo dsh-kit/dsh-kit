@@ -59,6 +59,11 @@ welcome; maintainers may close threads that ignore this.
 are checked against those facts by `scripts/check-consistency.mjs`, and copyable commands by
 `scripts/check-docs.mjs`. Change the source first, then the docs; `pnpm check` fails on drift.
 
+## Release
+
+See [PUBLISHING.md](PUBLISHING.md): GitHub owns review and history, npm owns the artifact, and CI publishes
+with provenance.
+
 ## Review and merge policy
 
 - `main` is protected: changes arrive through a pull request, not a direct push.

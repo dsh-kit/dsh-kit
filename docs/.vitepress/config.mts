@@ -46,6 +46,7 @@ export default defineConfig({
               text: '指南',
               items: [
                 { text: '快速开始', link: '/zh/guide/quick-start' },
+                { text: '教程', link: '/zh/guide/tutorial' },
                 { text: '为什么选 dsh-kit', link: '/zh/guide/why' },
                 { text: '工具链', link: '/zh/guide/toolchain' }
               ]
@@ -85,6 +86,7 @@ export default defineConfig({
           text: 'Guide',
           items: [
             { text: 'Quick start', link: '/guide/quick-start' },
+            { text: 'Tutorial', link: '/guide/tutorial' },
             { text: 'Why dsh-kit', link: '/guide/why' },
             { text: 'Toolchain', link: '/guide/toolchain' }
           ]

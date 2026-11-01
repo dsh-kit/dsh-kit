@@ -14,7 +14,7 @@ Status: pre-release, version 0.1.0. The generator and template pass `pnpm verify
 [中文](README.zh.md)
 
 Site: https://dsh-kit.dev (source in `docs/`, English + 中文). Repository: https://github.com/dsh-kit/dsh-kit. Roadmap: [ROADMAP.md](ROADMAP.md) ·
-[中文](ROADMAP.zh.md). Contributions: [CONTRIBUTING.md](CONTRIBUTING.md).
+[中文](ROADMAP.zh.md). Contributions: [CONTRIBUTING.md](CONTRIBUTING.md). Releasing: [PUBLISHING.md](PUBLISHING.md).
 
 ## What you get
 
@@ -24,6 +24,12 @@ Site: https://dsh-kit.dev (source in `docs/`, English + 中文). Repository: htt
 - `pnpm verify` = format check → lint → typecheck → tests → build → pack.
 - `AGENTS.md`, `llms.txt`, locale metadata, icon, CI, release checklist.
 - One generator: interactive on a TTY, non-interactive with `--yes`.
+
+## A real plugin
+
+[dsh-quicknote](https://github.com/dsh-kit/dsh-quicknote) is built from this template and maintained as a real
+plugin: composer capture, a JSON API, four Agent tools, a sidebar page and tests. It is the end-to-end reference
+for what the template is expected to deliver.
 
 ## Quick start
 
