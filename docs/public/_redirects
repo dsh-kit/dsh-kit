@@ -1,0 +1,5 @@
+# Preserve links from the first published slug.
+/blog/reload-failure-modes /blog/plugin-lifecycle-failure-modes 301
+/blog/reload-failure-modes.html /blog/plugin-lifecycle-failure-modes 301
+/zh/blog/reload-failure-modes /zh/blog/plugin-lifecycle-failure-modes 301
+/zh/blog/reload-failure-modes.html /zh/blog/plugin-lifecycle-failure-modes 301

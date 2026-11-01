@@ -51,7 +51,8 @@ export default defineConfig({
         sidebar: {
           '/zh/blog/': [
             { text: '博客', items: [
-              { text: '重载不是布尔值', link: '/zh/blog/reload-failure-modes' },
+              { text: 'Agent 规模下的验证架构', link: '/zh/blog/verification-at-agent-scale' },
+              { text: '插件生命周期的失败模式', link: '/zh/blog/plugin-lifecycle-failure-modes' },
               { text: '桌面 Agent 不是 Web 套壳', link: '/zh/blog/desktop-agents-not-web-apps' }
             ] }
           ],
@@ -101,7 +102,8 @@ export default defineConfig({
     sidebar: {
       '/blog/': [
         { text: 'Blog', items: [
-          { text: 'Reload is a spectrum', link: '/blog/reload-failure-modes' },
+          { text: 'Verification at agent scale', link: '/blog/verification-at-agent-scale' },
+          { text: 'Plugin lifecycle failure modes', link: '/blog/plugin-lifecycle-failure-modes' },
           { text: 'Desktop agents are not web apps in a window', link: '/blog/desktop-agents-not-web-apps' }
         ] }
       ],

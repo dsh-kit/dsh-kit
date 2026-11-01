@@ -1,10 +1,10 @@
 ---
-title: 'Reload is a spectrum: failure modes of desktop plugin lifecycles'
+title: 'Plugin lifecycle failure modes'
 description: 'Seven failure modes that appear when a desktop agent separates profile, host, client and app lifecycles.'
 date: 2026-11-01
 ---
 
-# Reload is a spectrum: failure modes of desktop plugin lifecycles
+# Plugin lifecycle failure modes
 
 > **Desktop agent lifecycle · Part 2 of 2**  
 > Start with [Part 1: Desktop agents are not web apps in a window](/blog/desktop-agents-not-web-apps).

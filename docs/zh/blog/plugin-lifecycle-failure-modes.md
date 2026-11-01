@@ -1,10 +1,10 @@
 ---
-title: '重载不是布尔值：桌面插件生命周期的失败模式'
+title: '插件生命周期的失败模式'
 description: '当桌面 Agent 把 profile、Host、Client 和 App 分成四层后，会出现的七种失败模式。'
 date: 2026-11-01
 ---
 
-# 重载不是布尔值：桌面插件生命周期的失败模式
+# 插件生命周期的失败模式
 
 > **桌面 Agent 生命周期 · 第 2 / 2 篇**  
 > 建议先读：[第 1 篇：桌面 Agent 不是 Web 套壳](/zh/blog/desktop-agents-not-web-apps)。

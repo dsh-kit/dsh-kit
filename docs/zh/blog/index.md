@@ -3,8 +3,13 @@
 围绕 DeepSeek Harness 插件生态的工程文章：桌面架构、插件生命周期、控制面与开发者体验。
 
 <div class="blog-list">
-<a class="blog-card" href="/zh/blog/reload-failure-modes">
-<h2>重载不是布尔值：桌面插件生命周期的失败模式</h2>
+<a class="blog-card" href="/zh/blog/verification-at-agent-scale">
+<h2>Agent 规模下的验证架构：DSH 的测试体系到底约束了什么</h2>
+<p>分层证据、真实组合与可审计快照：一个 Agent 密集的代码库如何决定什么才算证明。</p>
+<div class="meta">2026-11-01 · 测试、工程治理、架构</div>
+</a>
+<a class="blog-card" href="/zh/blog/plugin-lifecycle-failure-modes">
+<h2>插件生命周期的失败模式</h2>
 <p>当 profile、Host、Client 和 App 分成四层后，七种典型的失败模式，以及让状态可见的契约。</p>
 <div class="meta">第 2 / 2 篇 · 2026-11-01 · 架构、插件生命周期、可靠性</div>
 </a>
