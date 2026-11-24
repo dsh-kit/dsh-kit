@@ -1,0 +1,7 @@
+{
+  "name": "@example/dsh-fixture",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": { "./client": "./lib/client.js" },
+  "dsh": { "manifestVersion": 1, "client": { "platform": "web" } }
+}
