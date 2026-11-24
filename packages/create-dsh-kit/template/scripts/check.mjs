@@ -16,7 +16,11 @@ const patch = await readFile(join(root, "cordis.patch.yml"), "utf8");
 const constants = await readFile(join(root, "src/shared/constants.ts"), "utf8");
 
 const problems = [];
-if (!patch.includes(`name: ${pkg.name}`))
+if (
+  ![`name: ${pkg.name}`, `name: '${pkg.name}'`, `name: \"${pkg.name}\"`].some((line) =>
+    patch.includes(line),
+  )
+)
   problems.push("cordis.patch.yml does not reference the package name");
 const declaredName = /NAME\s*=\s*["']([^"']+)["']/.exec(constants)?.[1];
 if (declaredName !== pkg.name)

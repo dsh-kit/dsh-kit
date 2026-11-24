@@ -37,6 +37,51 @@ npm works too: `npm install && npm run verify`.
 - `AGENTS.md` / `llms.txt` — agent-facing context.
 - `PUBLISHING.md` — release checklist.
 
+## Assets and lazy vendor chunks
+
+Client JavaScript chunks and non-JavaScript assets are separate build outputs. `tsdown` only emits
+`client*.js`; copy declared assets explicitly so they also reach the published package:
+
+```js
+// scripts/build-assets.mjs
+import { nativeClientAssets } from './native-client-assets.mjs'
+
+const assets = nativeClientAssets({
+  assets: { 'pdfium.wasm': 'node_modules/@embedpdf/pdfium/dist/pdfium.wasm' }
+})
+await assets.copy() // validates sources, then copies into lib/
+```
+
+Run it after `tsdown` (`"build": "tsdown && node scripts/build-assets.mjs"`), because the host build
+cleans `lib/` first. `prepack` must run the same two steps. `files` must ship the result: the template
+already includes `lib/`; if you narrow that list, add each copied path and check `npm pack --dry-run`.
+
+DSH's native route serves only advertised `client*.js` chunks. The package asset route serves only
+images (`.svg`, `.png`, `.webp`, `.jpg`, `.jpeg`) from the `./assets/*` export mapped to
+`./lib/assets/*`. A copied `.wasm` or `.json` is packaged but has no HTTP URL yet; embed it or serve it
+from a Host route until DSH exposes a binary asset route.
+
+To move a third-party dynamic import into an explicit sibling chunk, use
+`scripts/dynamic-import-chunks.mjs`:
+
+```js
+import { dynamicImportChunks } from './dynamic-import-chunks.mjs'
+
+const lazy = dynamicImportChunks({
+  groups: [{ file: 'client.syntax.js', match: /^shiki\/(?:wasm|dist)\//u }]
+})
+
+// Call rewrite() from a bundler load/transform hook, then bundle entries() as client chunks.
+const { code, changed } = await lazy.rewrite(source, { filename })
+if (changed) return { contents: code, loader: 'js', resolveDir: dirname(filename) }
+```
+
+`entries()` returns one `{ file, contents, resolveDir }` per matched group, with an exported
+`modules` map. `rewrite()` replaces only dynamic imports, preserves static imports, and uses DSH's
+`require.async('./client.<group>.js')` plus that map to keep the original promise shape. The generated
+chunk still needs the normal `nativeClientWrapper()` registration.
+
+
 ## License
 
 MIT
