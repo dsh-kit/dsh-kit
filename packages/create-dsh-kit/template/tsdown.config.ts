@@ -1,16 +1,13 @@
 /**
  * Library build for both halves.
  *
- * The client bundle has to arrive as one script that calls
- * `window.__ModuleLoader__.load`, so the CJS output is wrapped with a banner and
- * footer here — never in the source.
+ * The template helper registers native lazy factories and can also build
+ * explicitly named package-local chunks. Keep wrappers out of client source.
  *
  * @module tsdown.config
  */
 import pkg from './package.json' with { type: 'json' }
-
-const moduleBanner = `window.__ModuleLoader__.load({ id: ${JSON.stringify(pkg.name)}, factory: (require) => { var module = { exports: {} }; var exports = module.exports;`
-const moduleFooter = `return module.exports; } });`
+import { nativeClientBuilds } from './scripts/native-client-build.mjs'
 
 export default [
   {
@@ -22,18 +19,5 @@ export default [
     clean: true,
     outputOptions: { entryFileNames: 'index.js' }
   },
-  {
-    entry: { client: 'src/client/index.tsx' },
-    outDir: 'lib',
-    format: 'cjs',
-    platform: 'browser',
-    deps: { neverBundle: ['react', 'react/jsx-runtime'] },
-    dts: false,
-    clean: false,
-    outputOptions: {
-      entryFileNames: 'client.js',
-      banner: moduleBanner,
-      footer: moduleFooter
-    }
-  }
+  ...nativeClientBuilds({ id: pkg.name, entry: 'src/client/index.tsx' })
 ]
