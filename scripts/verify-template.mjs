@@ -33,8 +33,13 @@ try {
   ], {
     stdio: 'inherit'
   })
-  await run(pnpm, ['install'], { cwd: target, stdio: 'inherit' })
-  await run(pnpm, ['verify'], { cwd: target, stdio: 'inherit' })
+  // Resolve pnpm from this repository's packageManager before entering the generated project.
+  await run(pnpm, ['--dir', target, 'install'], { cwd: root, stdio: 'inherit' })
+  await run(pnpm, ['--dir', target, 'verify'], { cwd: root, stdio: 'inherit' })
+  await run(process.execPath, [
+    join(root, 'packages/create-dsh-kit/test/verify-client-build.mjs'),
+    target
+  ], { cwd: target, stdio: 'inherit' })
   console.log(`\ntemplate ok: ${target}`)
 } finally {
   if (keep) console.log(`kept: ${target}`)
