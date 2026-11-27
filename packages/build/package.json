@@ -1,0 +1,39 @@
+{
+  "name": "@dsh-kit/build",
+  "version": "0.1.0",
+  "description": "Config-driven Vite build for DeepSeek Harness plugins.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./config": "./src/config.mjs",
+    "./vite": "./src/vite.mjs",
+    "./build": "./src/build.mjs",
+    "./wrapper": "./src/wrapper.mjs",
+    "./assets": "./src/assets.mjs"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "peerDependencies": {
+    "vite": ">=5"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "vite",
+    "build"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "pack:check": "npm pack --dry-run"
+  }
+}

@@ -26,7 +26,7 @@
     "template"
   ],
   "scripts": {
-    "test": "pnpm --filter create-dsh-kit test",
+    "test": "pnpm --filter create-dsh-kit test && pnpm --filter @dsh-kit/build test",
     "preflight": "pnpm --filter create-dsh-kit preflight",
     "pack:check": "pnpm --filter create-dsh-kit pack:check",
     "docs:dev": "pnpm --filter dsh-kit-docs dev",
